@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.min.js"></script>
+	<style>
+	*{margin:0;padding:0 }
+	body{width:100%;}
+	#shape{width:300px;height: 100px; background: red; position:absolute;  top:0; left:50%; margin-left:-150px;-webkit-animation:  1s forwards;}
+	@-webkit-keyframes myfirst /* Safari 和 Chrome */
+	{
+	from  {-webkit-transform: translate(0px,-100px);}
+	to {-webkit-transform: translate(0px,0px);}
+	}
+		@-webkit-keyframes myfirst2 /* Safari 和 Chrome */
+	{
+	from {-webkit-transform: translate(0px,0px);}
+	to {-webkit-transform: translate(0px,-100px);}
+	}
+	
+
+	
+</style>
+</head>
+
+<body>
+	<div id='shape'>弹框</div>
+	<input type="button" id="bt1" value="下来">
+	<input type="button" id="bt2" value="上去">
+	<input type="button" id="bt3" value="下去">
+<script>
+var obtn = true;
+
+$('#bt1').click(function(){
+	classFrames('myfirst',false)
+})
+$('#bt2').click(function(){
+	classFrames('myfirst2',true)
+})
+// $('#bt3').click(function(){
+// 	if(obtn){
+// 		classFrames('myfirst',false)
+// 	}else{
+// 		classFrames('myfirst2',true)
+// 	}
+
+// })
+function classFrames( classAnimate,obtnValue){
+	$('#shape').css('animation-name',classAnimate);
+	obtn = obtnValue;
+}
+
+</script>
+	
+</body>
+</html>
