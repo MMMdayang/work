@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/aui.css">
+    <script src="jquery.min.js"></script>
+    <style>
+        body{ margin-bottom:40px; }
+        .banner a img{ width:100%; }
+        .banner{ width:100%; height:220px; overflow:hidden; position:relative; }
+        .banner span,.top_nav_top .span{ position:absolute; top:0; left:15px; }
+        .zuixin_num a{ display:block; width:35px; height:35px; border-radius:50%; border:1px solid #3fa08c; margin-right:5px; line-height:35px; }
+        .zuixin_main{  overflow:hidden; }
+        h1{ color:#656661; margin-bottom:10px;}
+        .zuixin p{ color:#616161; margin-bottom:8px; }
+        .zuixin_main_menu{ padding:0 10px; }
+        .touzhu a{ color:#de6665; }
+        .no_bor:after{ border:none !important; }
+        .no_bor li:after{ border:none !important; }
+        .no_bor_left:after{ border-left:none !important; }
+        .no_bor_right:after{ border-right:none !important; }
+        .no_bor_bottom:after{ border-bottom:none !important; }
+        .shop_list li{ padding:30px 0; }
+        h1 a{ font-size:16px; float:right; padding-top:3px; color:#8e8e8e;}
+        .aui-content{ margin-bottom:0; }
+        .down_nav_menu{ width:100%; height:100%; background-color:#232323; }
+        .down_nav_menu li{  width:25%; height:65px; float:left; background-color:#232323; }
+       /*  .down_nav_menu li:hover{ background-color:#2b2b2b; } */
+        .down_nav{ width:100%; position:fixed; bottom:0; }
+
+        .top_nav a img{ width:100%; border-radius:50%; }
+        .top_nav{ width:100%; height:200px; padding-top:50px; background-color:#fff; overflow:hidden; position:absolute; z-index:20; top:-200px; }
+        .yhm{ margin-bottom: 25px; }
+        .top_nav_top .aui-col-xs-5{ padding-top:10px; }
+        .top_nav_move{}
+        
+        .top_nav_body{ width:100%; height:100%; position:absolute; z-index:15; top:0; left:0; background-color:#000; opacity:0; display:none;}
+      /*   @keyframes top_nav_bg
+        {
+        from { opacity:0;}
+        to { opacity:.5;}
+        }
+        .top_nav_body_bg_hide{ animation: top_nav_bg_hide 1s forwards; }
+        @keyframes top_nav_bg_hide
+        {
+        from { opacity:.5;}
+        to { opacity:0;}
+        } */
+    </style>
+</head>
+<body>
+	<ul class="show">
+     <li><a href="#"><img src="images/banner.jpg" alt=""></a></li>   
+    </ul>
+<script type="text/javascript">
+$(function(){
+
+    $(".banner span").click(function() {
+        $(".top_nav").animate(
+            {top: "0"}
+        , 500);
+        $(".top_nav_body").show();
+        $(".top_nav_body").animate(
+            {opacity:".5"}
+            , 500)
+
+    });
+    $(".top_nav_top .span").click(function() {
+        $(".top_nav").animate(
+            {top: "-200px"}
+        , 500);
+        $(".top_nav_body").animate(
+            {opacity:"0"}
+        , 500)
+        $(".top_nav_body").hide(0);
+    });
+})
+// function move(){
+
+//     $(".banner span").click(function() {
+//             $("top_nav").css(' animation','myfirst 2s forwards');
+//     });
+//     $(".top_nav_top span").click(function() {
+//          $(".top_nav").css("top","-200px");
+//           $(".banner span").show(); 
+//     });
+// }
+
+//     var obtn= true;
+//     $(".banner span").click(function() {
+//            classFrames('myfirst',false);
+//             $(".top_nav_body").addClass('top_nav_body_bg');
+//     });
+//     $(".top_nav_top .span").click(function(){
+//        classFrames('myfirst2',true);
+//         $(".top_nav_body").addClass('top_nav_body_bg_hide');
+//         $(".top_nav_body").delay(1000).hide(0);
+//     })
+
+// function classFrames( classAnimate,obtnValue){
+//     $('.top_nav').css('animation-name',classAnimate);
+//     obtn = obtnValue;
+// }
+// var obtn = true;
+
+// $('.banner span').click(function(){
+//     alert("00000");
+//     classFrames('myfirst',false);
+// })
+// $('.top_nav_top .span').click(function(){
+//     classFrames('myfirst2',true);
+// })
+// function classFrames( classAnimate,obtnValue){
+//     $('.top_nav').css('animation-name',classAnimate);
+//     obtn = obtnValue;
+// }
+</script>
+</body>
+</html>
